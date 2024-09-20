@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/default_padding"
+    android:paddingEnd="@dimen/default_padding"
+    tools:context=".view.UnitAddActivity">
+
+    <EditText
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/unit_name"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minEms="10" />
+
+    <Spinner
+        android:id="@+id/spn_mother"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:prompt="@string/unit_mother"
+        android:spinnerMode="dialog" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnAddClick"
+        android:text="@string/unit_add" />
+</LinearLayout>

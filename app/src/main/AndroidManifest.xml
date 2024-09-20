@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name=".KazlamApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_appicon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.UnitLogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.UnitLogAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.UnitLogListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.LeaveRequestAddUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.LeaveRequestListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.DisciplineAddUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.DisciplineListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.NoteAddUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.NoteListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.SoldierActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.SoldierAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.SoldierListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.UnitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.UnitAddActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity
+            android:name=".view.UnitListActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

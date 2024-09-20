@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".view.UnitActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/lyt_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:scrollbars="horizontal">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@color/olive"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    app:navigationIcon="@drawable/baseline_menu_24" />
+
+                <EditText
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_padding"
+                    android:layout_marginEnd="@dimen/default_padding"
+                    android:hint="@string/unit_name"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:minHeight="48dp" />
+
+                <Spinner
+                    android:id="@+id/spn_mother"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_padding"
+                    android:layout_marginEnd="@dimen/default_padding"
+                    android:minHeight="48dp"
+                    android:prompt="@string/unit_mother"
+                    android:spinnerMode="dialog" />
+
+                <Spinner
+                    android:id="@+id/spn_commander"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_padding"
+                    android:layout_marginEnd="@dimen/default_padding"
+                    android:minHeight="48dp"
+                    android:prompt="@string/unit_commander"
+                    android:spinnerMode="dialog" />
+
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/baseline_edit_24"
+                    android:onClick="btnUpdateClick"
+                    android:text="@string/update" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_soldiers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soldiers_title" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_notes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notes_title" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_unit_logs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unit_logs_title" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_discipline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/disc_notices_title" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_leave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/leave_requests_title" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_units"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/units_title" />
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/drawer_nav_view" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="soldiers_sort_by">
+        <item>מספר אישי</item>
+        <item>שם</item>
+        <item>יחידה</item>
+        <item>דרגה</item>
+        <item>תפקיד</item>
+    </string-array>
+
+    <string-array name="notes_sort_by">
+        <item>חייל</item>
+        <item>כותרת</item>
+        <item>תאריך שינוי אחרון</item>
+    </string-array>
+
+    <string-array name="disciplinary_notice_sort_by">
+        <item>חייל</item>
+        <item>כותרת</item>
+        <item>תאריך</item>
+    </string-array>
+
+    <string-array name="leave_request_sort_by">
+        <item>חייל</item>
+        <item>סיבה</item>
+        <item>תאריך</item>
+        <item>תאריך חזרה</item>
+    </string-array>
+
+    <string-array name="unit_logs_sort_by">
+        <item>כותרת</item>
+        <item>יחידה</item>
+        <item>תאריך</item>
+    </string-array>
+</resources>

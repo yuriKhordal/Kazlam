@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".view.SoldierActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/lyt_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:scrollbars="horizontal">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@color/olive"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    app:navigationIcon="@drawable/baseline_menu_24" />
+
+                <EditText
+                    android:id="@+id/txt_mp_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_padding"
+                    android:layout_marginEnd="@dimen/default_padding"
+                    android:hint="@string/soldier_id"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:minHeight="48dp" />
+
+                <EditText
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_padding"
+                    android:layout_marginEnd="@dimen/default_padding"
+                    android:hint="@string/soldier_name"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:minHeight="48dp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/txt_role"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_padding"
+                    android:layout_marginEnd="@dimen/default_padding"
+                    android:hint="@string/soldier_role"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:minHeight="48dp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/txt_rank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_padding"
+                    android:layout_marginEnd="@dimen/default_padding"
+                    android:hint="@string/soldier_rank"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:minHeight="48dp" />
+
+                <Spinner
+                    android:id="@+id/spn_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_padding"
+                    android:layout_marginEnd="@dimen/default_padding"
+                    android:minHeight="48dp"
+                    android:prompt="@string/soldier_unit"
+                    android:spinnerMode="dialog" />
+
+
+                <LinearLayout
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_update"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/default_padding"
+                        android:drawableEnd="@drawable/baseline_edit_24"
+                        android:onClick="btnUpdateClick"
+                        android:text="@string/update" />
+
+                    <Button
+                        android:id="@+id/btn_copy"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/default_padding"
+                        android:drawableEnd="@drawable/baseline_content_copy_24"
+                        android:onClick="btnCopyClick"
+                        android:text="@string/copy" />
+
+                    <Button
+                        android:id="@+id/btn_delete"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/baseline_delete_forever_24"
+                        android:onClick="btnDeleteClick"
+                        android:text="@string/delete" />
+                </LinearLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_notes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notes_title" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_leave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/leave_requests_title" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_discipline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/disc_notices_title" />
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include layout="@layout/drawer_nav_view" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

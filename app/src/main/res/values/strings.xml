@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">כזל\"מ</string>
+    <string name="app_name_desc">כזה למפקד</string>
+
+    <!--Units-->
+    <string name="units_title">יחידות</string>
+    <string name="unit_name">שם יחידה</string>
+    <string name="unit_mother">יחידת אם</string>
+    <string name="unit_add">הוסף</string>
+    <string name="unit_none">(ללא)</string>
+    <string name="unit_commander">מפקד היחידה</string>
+
+    <!--Soldiers-->
+    <string name="soldiers_title">חיילים</string>
+    <string name="soldier_id">מספר אישי</string>
+    <string name="soldier_name">שם מלא</string>
+    <string name="soldier_unit">יחידה</string>
+    <string name="soldier_role">תפקיד</string>
+    <string name="soldier_rank">דרגה</string>
+
+    <!--Notes-->
+    <string name="note">הערה</string>
+    <string name="notes_title">הערות</string>
+    <string name="note_title">כותרת</string>
+    <string name="note_content">הערה</string>
+    <string name="note_soldier">חייל</string>
+    <string name="note_create_date">תאריך יצירה</string>
+    <string name="note_update_date">תאריך שינוי אחרון</string>
+    <string name="note_tag_list">תגיות(מופרד ברווחים)</string>
+
+    <!--Discipline-->
+    <string name="disc_notice">הערת משמעת</string>
+    <string name="disc_notices_title">הערות משמעת</string>
+    <string name="disc_title">כותרת</string>
+    <string name="disc_description">תיאור</string>
+    <string name="disc_punishment">עונש</string>
+    <string name="disc_soldier">חייל</string>
+    <string name="disc_date">תאריך</string>
+
+    <!--Leave Requests-->
+    <string name="leave_request">בקשת יציאה</string>
+    <string name="leave_requests_title">בקשות יציאה</string>
+    <string name="leave_request_soldier">חייל</string>
+    <string name="leave_request_date">תאריך</string>
+    <string name="leave_request_return_date">תאריך חזרה</string>
+    <string name="leave_request_reason">סיבה</string>
+    <string name="leave_request_status">סטטוס</string>
+
+    <!--Unit Logs-->
+    <string name="unit_logs_title">רשימות</string>
+    <string name="unit_log">רשימה/דוח</string>
+    <string name="unit_log_title">כותרת</string>
+    <string name="unit_log_unit">יחידה</string>
+    <string name="unit_log_date">תאריך</string>
+    <string name="unit_log_soldier">חייל</string>
+    <string name="unit_log_value">ערך</string>
+
+    <!--Settings Activity-->
+    <string name="settings_title">הגדרות</string>
+
+    <!--Delete Dialogs-->
+    <string name="dialog_are_you_sure">האם את/ה בטוח/ה?</string>
+    <string name="dialog_unit_delete_msg">מחיקת %1$s ימחק את כל התת-יחידות שלה.</string>
+    <string name="dialog_soldier_delete_msg">למחוק את %1$s?</string>
+    <string name="dialog_note_delete_msg">למחוק הודעה עם הכותרת %1$s?</string>
+    <string name="dialog_discipline_delete_msg">למחוק הערת משמעת עם הכותרת %1$s?</string>
+    <string name="dialog_leave_request_delete_msg">
+        למחוק בקשת יציאה:
+        \n
+        %1$s
+    </string>
+    <string name="dialog_unit_log_delete_msg">למחוק רשימה %1$s?</string>
+
+    <!--Errors-->
+    <string name="err_unit_empty_name">שם יחידה לא יכול להיות ריק!</string>
+    <string name="err_unit_not_exist">שגיאה: יחידה לא קיימת</string>
+    <string name="err_soldier_id_not_number">שגיאה: מספר אישי חייב להיות מספר!</string>
+    <string name="err_soldier_empty_name">שם לא יכול להיות ריק!</string>
+    <string name="err_soldier_empty_unit">לא יכול להיות חייל ללא יחידת אם!</string>
+    <string name="err_soldier_not_exist">שגיאה: חייל לא קיים</string>
+    <string name="err_note_empty_title">כותרת לא יכולה להיות ריקה!</string>
+    <string name="err_note_empty_soldier">שדה חייל לא יכול להיות ריק!</string>
+    <string name="err_note_not_exist">שגיאה: הודעה לא קיימת</string>
+    <string name="err_discipline_not_exist">שגיאה: הערת משמעת לא קיימת</string>
+    <string name="err_discipline_empty_title">כותרת לא יכולה להיות ריקה!</string>
+    <string name="err_discipline_empty_soldier">שדה חייל לא יכול להיות ריק!</string>
+    <string name="err_discipline_empty_date">תאריך לא יכול להיות ריק!</string>
+    <string name="err_leave_request_not_exist">שגיאה: בקשת יציאה לא קיימת</string>
+    <string name="err_leave_request_empty_reason">חייבת להיות סיבה לבקשת יציאה!</string>
+    <string name="err_leave_request_empty_date">תאריך לא יכול להיות ריק!</string>
+    <string name="err_leave_request_empty_return_date">תאריך חזרה לא יכול להיות ריק!</string>
+    <string name="err_leave_request_empty_soldier">שדה חייל לא יכול להיות ריק!</string>
+    <string name="err_unit_log_empty_title">כותרת לא יכולה להיות ריקה!</string>
+    <string name="err_unit_log_empty_unit">צריך לבחור יחידה לרשימה!</string>
+    <string name="err_unit_log_not_exist">שגיאה: רשימה לא קיימת</string>
+    <string name="err_unit_log_wrong_num_children">
+        שגיאה לא ברורה. מספר החיילים ברשימה לא תואם למספר החיילים במסד נתונים?
+    </string>
+
+    <!--Etc-->
+    <string name="dialog_yes">כן</string>
+    <string name="dialog_no">לא</string>
+
+    <string name="spinner_none">(ללא)</string>
+    <string name="update">עדכן</string>
+    <string name="copy">העתק</string>
+    <string name="update_success">\'%1$s\' עודכן בהצלחה</string>
+    <string name="copy_success">\'%1$s\' הועתק בהצלחה</string>
+    <string name="add">הוסף</string>
+    <string name="delete">מחק</string>
+    <string name="lineNum">שורה</string>
+    <string name="lineNum2">#</string>
+    <string name="sortby">מיין לפי:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
