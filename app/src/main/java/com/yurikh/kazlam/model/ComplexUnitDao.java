@@ -53,8 +53,10 @@ public abstract class ComplexUnitDao implements UnitDao {
       unsetCommanders(unitIds);
 
       KazlamApp.getDatabase().soldiersDao().delete(tree.flattenSoldiers()).blockingAwait();
-      for (UnitTree.Node node : tree.postOrder())
+      for (UnitTree.Node node : tree.postOrder()) {
+         KazlamApp.getDatabase().unitLogsDao().deleteByUnit(node.parent.id).blockingAwait();
          KazlamApp.getDatabase().unitsDao().deleteInternal(node.parent).blockingAwait();
+      }
    }
 
    @Query("UPDATE Units SET commanderId=null WHERE id IN(:ids)")

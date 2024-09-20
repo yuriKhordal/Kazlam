@@ -40,4 +40,8 @@ public interface UnitLogSoldierDao {
 
    @Query("DELETE FROM UnitLogSoldiers WHERE soldierId=:soldierId")
    Completable deleteBySoldier(long soldierId);
+
+   @Query("DELETE FROM UnitLogSoldiers WHERE logId=:logId")
+   Completable deleteByLog(long logId);
+
 }

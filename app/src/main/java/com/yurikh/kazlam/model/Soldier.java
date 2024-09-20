@@ -15,7 +15,7 @@ import androidx.room.PrimaryKey;
    indices = @Index(value = "mpId")
 )
 public class Soldier {
-   @PrimaryKey
+   @PrimaryKey(autoGenerate = true)
    public long id;
    public int mpId; // Military Personal ID. (Mispar Ishi)
    @ColumnInfo(index = true)
